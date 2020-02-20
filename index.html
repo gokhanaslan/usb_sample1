@@ -43,7 +43,10 @@ const deviceButtonPressed = document.getElementById("deviceButtonPressed");
 let device;
 connectButton.onclick = async () => {
   device = await navigator.usb.requestDevice({
-    filters: [{ vendorId: 2352 }, { vendorId:1321}]
+    filters:
+      [
+         // { vendorId: 2352 }, { vendorId:1321}
+      ]
   });
 
 async function connectDevice(device) {
