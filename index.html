@@ -51,7 +51,7 @@ var serial = {};
             return this.device_.selectConfiguration(1);
           }
         })
-        .then(() => device_.claimInterface(device_.configuration.interfaces[0].interfaceNumber))
+        .then(() => this.device_.claimInterface(0))
         .then(() => {
           readLoop();
         });
